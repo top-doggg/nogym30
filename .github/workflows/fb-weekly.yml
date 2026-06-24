@@ -1,0 +1,39 @@
+name: Weekly Facebook Content Generator
+
+on:
+  schedule:
+    # Every Monday at 08:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      week_offset:
+        description: 'Weeks ahead to generate (0 = this week)'
+        required: false
+        default: '0'
+
+jobs:
+  build-week:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+          cache: 'pip'
+
+      - name: Install requests
+        run: pip install requests
+
+      - name: Generate weekly Facebook posts
+        run: |
+          python scripts/build_weekly_fb_posts.py ${{ github.event.inputs.week_offset || 0 }}
+
+      - name: Commit weekly schedule
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add marketing/fb/ || true
+          git diff --cached --quiet || git commit -m "chore: generate weekly Facebook schedule"
+          git push || true

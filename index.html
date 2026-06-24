@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Health Check — Local Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="shield" aria-hidden="true"></div>
+                <div>
+                    <div class="brand-name">Sentinel Local</div>
+                    <div class="brand-sub">Cybersecurity Health Check</div>
+                </div>
+            </div>
+        </header>
+
+        <h1>See Where Your Business Is Exposed in 30 Minutes</h1>
+        <p class="sub">A scored, prioritized Cyber Risk Health Check for shops, offices, and service businesses — no jargon.</p>
+
+        <div class="cards">
+            <div class="card">
+                <div class="card-num">01</div>
+                <div class="card-title">Cyber Risk Scorecard</div>
+                <p class="card-body">One-page score with your overall risk tier and category breakdown.</p>
+            </div>
+            <div class="card">
+                <div class="card-num">02</div>
+                <div class="card-title">Top 3 Prioritized Fixes</div>
+                <p class="card-body">Ranked by speed and impact so you stop guessing.</p>
+            </div>
+            <div class="card">
+                <div class="card-num">03</div>
+                <div class="card-title">30-Minute Walkthrough</div>
+                <p class="card-body">I explain the score, the fixes, and what comes next.</p>
+            </div>
+        </div>
+
+        <div class="split">
+            <div class="panel">
+                <h3>How this works</h3>
+                <p>It’s a conversation-based review — no software to install, no changes to your systems. Answer 18 quick questions and get your score instantly.</p>
+                <div class="pills">
+                    <span class="pill">Remote or on-site</span>
+                    <span class="pill">Read-only intake</span>
+                    <span class="pill">15-minute questionnaire</span>
+                </div>
+            </div>
+            <div class="panel accent">
+                <div class="eyebrow">Investment</div>
+                <div class="price">$147</div>
+                <div class="price-note">One-time health check</div>
+                <a class="cta" href="#intake">Start the Check</a>
+                <div class="pills">
+                    <span class="pill">Refundable before walkthrough</span>
+                    <span class="pill">No contract</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="intake">
+            <h2 class="section-title">18 Questions. 5 Minutes.</h2>
+            <form id="health-form" class="intake-form">
+                <fieldset>
+                    <legend>About You</legend>
+                    <div class="row">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Work email" required>
+                    </div>
+                    <div class="row">
+                        <input type="text" name="business" placeholder="Business name" required>
+                        <select name="employees" required>
+                            <option value="">Employees</option>
+                            <option>1–5</option>
+                            <option>6–20</option>
+                            <option>21–50</option>
+                            <option>50+</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Access & Identity</legend>
+                    <label><input type="checkbox" name="mfa_email"> MFA on email</label>
+                    <label><input type="checkbox" name="mfa_banking"> MFA on business banking</label>
+                    <label><input type="checkbox" name="mfa_accounting"> MFA on accounting software</label>
+                    <label><input type="checkbox" name="mfa_payment"> MFA on payment processing</label>
+                    <label><input type="checkbox" name="mfa_cloud"> MFA on cloud storage</label>
+                    <label><input type="checkbox" name="password_manager"> Team uses a password manager</label>
+                    <label><input type="checkbox" name="no_shared_passwords"> No shared passwords</label>
+                    <label><input type="checkbox" name="admin_limited"> Admin access limited to 1–2 people</label>
+                    <label><input type="checkbox" name="offboarding_24h"> Accounts disabled within 24h of exit</label>
+                    <label><input type="checkbox" name="vendor_review"> Vendor logins reviewed quarterly</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Data Protection</legend>
+                    <label><input type="checkbox" name="backups_exist"> Automated backups exist for key data</label>
+                    <label><input type="checkbox" name="backups_tested"> Backup restore tested within last 90 days</label>
+                    <label><input type="checkbox" name="devices_encrypted"> Company devices encrypted</label>
+                    <label><input type="checkbox" name="sensitive_pos_only"> Customer card data stays in POS only</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Network & Endpoint</legend>
+                    <label><input type="checkbox" name="av_edr_all"> Antivirus/EDR on every device</label>
+                    <label><input type="checkbox" name="guest_wifi_segment"> Guest Wi-Fi separate from business Wi-Fi</label>
+                    <label><input type="checkbox" name="patches_14d"> OS/browser updates within 14 days</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Financial & Payment</legend>
+                    <label><input type="checkbox" name="card_not_present_pci"> Phone/online payments PCI-compliant</label>
+                    <label><input type="checkbox" name="banking_dual_approval"> Bank requires dual approval for wires/ACH</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Human Factor</legend>
+                    <label><input type="checkbox" name="annual_training"> Cybersecurity training at least annually</label>
+                    <label><input type="checkbox" name="recover_72h"> Can resume operations within 72h if hit tonight</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Insurance & Documentation</legend>
+                    <label><input type="checkbox" name="cyber_insurance"> Carry cyber insurance</label>
+                    <label><input type="checkbox" name="incident_response_doc"> Have a 1-page incident response contact list</label>
+                </fieldset>
+
+                <button type="submit" class="submit">Compute My Score →</button>
+            </form>
+        </section>
+
+        <div id="result" class="result" style="display:none;">
+            <div class="result-header">
+                <div id="score-tier" class="tier">Moderate Risk</div>
+                <div id="score-num" class="score">— / 40</div>
+                <div class="label">Your Cyber Risk Score</div>
+                <div class="bar"><div id="score-bar-fill" style="width:0%;"></div></div>
+                <div id="cat-breakdown" class="breakdown"></div>
+            </div>
+
+            <div class="actions">
+                <h2>What’s next?</h2>
+                <p class="actions-sub">Ready to fix the top gaps? I’ll walk you through the 3 prioritized fixes on a 30-minute call.</p>
+                <div id="fixes"></div>
+                <a id="book-btn" class="cta" href="#">Book Your Walkthrough →</a>
+                <p class="actions-contact">
+                    <strong>[Your Name]</strong> — [Phone] — [Website]
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p>© <span id="year"></span> <strong>[Your Name]</strong>. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

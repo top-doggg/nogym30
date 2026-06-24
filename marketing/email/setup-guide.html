@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>No-Gym 30 — Email Setup</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; background:#fafafa; color:#1a1a1a; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 28px 22px; }
+    h1 { font-size: 24px; margin: 0 0 14px; }
+    h2 { font-size: 18px; margin: 18px 0 8px; }
+    p, li { font-size: 16px; line-height: 1.6; }
+    pre { background:#111; color:#fff; padding:14px; border-radius:10px; overflow:auto; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+    .box { border:1px solid #e6e6e6; border-radius:12px; padding:16px 18px; background:#fff; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>No-Gym 30 — Free Email Setup Guide</h1>
+    <p>This is a zero-cost email setup flow using Google Drive + Gmail. No new service required.</p>
+
+    <h2>Step 1 — Prepare the sample</h2>
+    <p>Create a PDF or Google Doc with the free 3-Day Sample content from your marketing files.</p>
+    <p>Upload it to Drive and set the link to <strong>Anyone with the link → Viewer</strong>.</p>
+
+    <h2>Step 2 — Create a Google Form</h2>
+    <p>Go to Google Forms → Blank form:</p>
+    <div class="box">
+      <p>Title: No-Gym 30 — Get Your Free 3-Day Sample</p>
+      <p>Question: “Email address” → Short answer → Required</p>
+    </div>
+    <p>Open <strong>Responses → Link to Sheets</strong>.</p>
+
+    <h2>Step 3 — Turn the form into a landing form on your site</h2>
+    <p>You can collect emails via simple `<form action="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse">` on your landing page.</p>
+    <p>This redirects submissions from your website into your Google Sheet with no extra tool.</p>
+
+    <h2>Step 4 — Send emails</h2>
+    <p>Use your existing Gmail. Send to the collected list manually or via a free Google Apps Script merge.</p>
+
+    <h2>Step 5 — Add Google Analytics behavior tags</h2>
+    <p>Once GA4 is in `index.html`, you can later tag email clickers with UTM parameters:</p>
+    <pre><code>https://nogym30.netlify.app/?utm_source=email&utm_medium=newsletter&utm_campaign=day2</code></pre>
+  </div>
+</body>
+</html>

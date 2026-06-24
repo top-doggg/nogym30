@@ -129,7 +129,11 @@
                     <label><input type="checkbox" name="incident_response_doc"> Have a 1-page incident response contact list</label>
                 </fieldset>
 
-                <button type="submit" class="submit">Compute My Score →</button>
+                <button type="submit" class="submit">Book My Free 10-Min Triage →</button>
+                <p style="color:  var(--muted); font-size: 12px; line-height: 1.4;">
+                  By submitting you agree to be contacted about your Cyber Health Check.
+                  <br>No credit card required.
+                </p>
             </form>
         </section>
 
@@ -146,10 +150,16 @@
                 <h2>What’s next?</h2>
                 <p class="actions-sub">Ready to fix the top gaps? I’ll walk you through the 3 prioritized fixes on a 30-minute call.</p>
                 <div id="fixes"></div>
-                <a id="book-btn" class="cta" href="#">Book Your Walkthrough →</a>
+                <div id="book-section" class="book-section" style="display:none;">
+                <h2>Book Your Triage Call</h2>
+                <p class="actions-sub">Choose a time and I’ll send your scorecard before we talk.</p>
+                <a class="cta" href="#" target="_blank" rel="noopener">Open Calendly (15 min)</a>
+                <br>
+                <a id="book-calendly-30" class="cta secondary" href="#" target="_blank" rel="noopener">Open Calendly (30 min)</a>
                 <p class="actions-contact">
-                    <strong>[Your Name]</strong> — [Phone] — [Website]
+                Or call/text <strong>[Phone]</strong>
                 </p>
+                </div>
             </div>
         </div>
 
